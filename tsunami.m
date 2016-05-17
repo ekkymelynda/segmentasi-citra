@@ -1,5 +1,5 @@
 clear all; close all; clc;
-i = imread ('02.jpg');
+i = imread ('Satellite image.main story.jpg');
 figure,imshow(i);title('Citra Asli');
 
 rgb = rgb2gray(i);
@@ -41,7 +41,7 @@ ImgPoint=get(gca,'CurrentPoint')
 XPoint = ImgPoint(1,1);
 YPoint = ImgPoint(1,2);
 
-g = splitmerge(CitraFilter, 2, @PREDICATE);
+g = splitmerge(CitraFilter, 2, @predicate);
 figure,imshow(g);title('Citra Region');
 g1 = im2bw(g);
 sum(sum(g1))
